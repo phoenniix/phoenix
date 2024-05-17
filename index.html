@@ -1,0 +1,1579 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>PHOENIX</title>
+	<link rel="shortcut icon" href="assets/images/culture-depot-logo.webp">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
+
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/cursor.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/vanilla-calendar.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<style>
+		.video_wrap {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.video_wrap::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+		}
+
+		.video_wrap img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.video_play_btn {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			font-size: 40px;
+			text-decoration: none;
+		}
+
+		.item_image img {
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.course_cards_container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.course_card {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.item_image {
+			display: flex;
+			flex: 1;
+			overflow: hidden;
+		}
+
+		.item_image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.course_card,
+		.event_card {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			height: 50px;
+			width: 50px;
+			outline: #06121a;
+			background-size: 0%, 0%;
+			border-radius: 50%;
+			border: 1px solid #06121a;
+			background-color: #06121a;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.carousel-control-prev-icon:after,
+		.carousel-control-next-icon:after {
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			font-size: 20px;
+		}
+
+		.carousel-control-prev-icon:after {
+			content: "\f053";
+			color: white;
+		}
+
+		.carousel-control-next-icon:after {
+			content: "\f054";
+			color: white;
+		}
+
+		@media (max-width: 768px) {
+
+			.carousel-control-prev,
+			.carousel-control-next {
+				display: none;
+			}
+		}
+		.tour_main {
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			position: relative;
+		}
+
+		.tour_main img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+		}
+
+		.title_tour_main {
+			position: absolute;
+			/* center */
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			opacity: 0.6;
+		}
+
+		/* responsive for tour_main */
+		@media (max-width: 768px) {
+			.tour_main {
+				flex-direction: column;
+			}
+
+			.title_tour_main {
+				width: 100%;
+				top: 0;
+				left: 0;
+				transform: none;
+				padding: 20px;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+			.title_tour_main h2 {
+				font-size: 24px !important;
+			}
+
+			.title_tour_main p {
+				font-size: 16px !important;
+			}
+		}
+
+		.italic {
+			font-style: italic;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="page_wrapper">
+
+		<div class="backtotop">
+			<a href="#" class="scroll">
+				<i class="far fa-arrow-up"></i>
+			</a>
+		</div>
+
+		<header class="site_header site_header_1">
+			<div class="container">
+				<div class="row align-items-center">
+
+					<div class="col col-lg-3 col-5">
+						<div class="site_logo">
+							<a class="site_link" href="index.html">
+								<img src="assets/images/culture-depot-logo.webp" width="70px" alt="Culture Depot">
+							</a>
+						</div>
+					</div>
+
+					<div class="col col-lg-8 col-2">
+						<nav class="main_menu navbar navbar-expand-lg">
+							<div class="main_menu_inner collapse navbar-collapse justify-content-center" id="main_menu_dropdown">
+								<ul class="main_menu_list unordered_list_center">
+									<li><a class="nav-link" href="index.html">Trang chủ</a></li>
+									<li class="dropdown">
+										<a class="nav-link" href="#" id="service_submenu" role="button" data-bs-toggle="dropdown"
+											aria-expanded="false">
+											Tour Nước Ngoài
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="service_submenu">
+											<li><a href="blog.html">Tour Châu Âu</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a class="nav-link" href="#" id="service_submenu" role="button" data-bs-toggle="dropdown"
+											aria-expanded="false">
+											Các dịch vụ khác
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="service_submenu">
+											<li><a href="blog.html">Dịch vụ visa</a></li>
+											<li><a href="blog.html">Dịch vụ lưu trú</a></li>
+											<li><a href="blog.html">Dịch vụ vận chuyển</a></li>
+										</ul>
+									</li>
+
+									<li><a class="nav-link" href="aboutus.html">Về chúng tôi</a></li>
+									<li><a class="nav-link" href="aboutus.html">Liên hệ</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page_content">
+			<div id="carouselExample" class="carousel slide" data-ride="carousel" data-wrap="true">
+				<section class="intro_video_section section_space_lg bg_light_2 overflow-hidden decoration_wrap">
+					<div class="tour_main">
+						<div class="title_tour_main">
+							<h2 style="font-size: 60px;">PHOENIX Tour </h2>
+							<p style="font-size: 24px;">Trải nghiệm du lịch chất lượng</p>
+						</div>
+						<img src="assets/images/thumbnal.jpg" alt="kevin-chen">	
+					</div>
+				</section>
+				<!-- <div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<section class="hero_banner style_1">
+							<div class="container">
+								<div class="content_wrap">
+									<div class="row">
+
+										<div class="col col-lg-7">
+											<h1 class="banner_small_title">NỔI BẬT TRONG THÁNG</h1>
+											<h2 class="banner_big_title">NGÔI THỨ NHẤT<br>SỐ ÍT</h2>
+											<p class="banner_description">
+												<b><i>Thế giới thì trôi đi, nhưng câu chuyện sẽ lưu giữ lại cảnh
+														tượng.</i></b><br><br>
+
+												Mỗi truyện ngắn là một lát cắt của thế giới. Ngôi thứ nhất số ít là những "con mắt đơn" đóng
+												khung trong từng lát cắt của thế giới. Nhưng khi những lát cắt ấy càng nhiều thêm, thì "con mắt
+												đơn" đã trở thành "con mắt kép" mà mọi lát cắt đã vấn vít vào nhau. Và ở đó, tôi <i>không
+												còn</i> là tôi, ta <i>không còn</i> là ta. Và rồi bạn cũng không còn là bạn nữa.<br><br>
+
+												Ở đó, điều gì đã <i>xảy ra</i> và điều gì <i>không xảy ra</i>?
+											</p>
+
+											<ul class="banner_btns_group unordered_list">
+												<li>
+													<a class="btn btn_primary" href="book_detail.html">
+														<span>
+															<small>Chi tiết tại đây</small>
+															<small>Chi tiết tại đây</small>
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+
+										<div class="col col-lg-5">
+											<div class="banner_image_1 decoration_wrap">
+												<div class="image_wrap">
+													<img
+														src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/ngoithunhatsoit01.jpg?v=1696216738573"
+														style="width: 100%;" alt="Ngôi thứ nhất số ít">
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+
+					<div class="carousel-item">
+						<section class="hero_banner style_1">
+							<div class="container">
+								<div class="content_wrap">
+									<div class="row">
+
+										<div class="col col-lg-7">
+											<h1 class="banner_small_title">NỔI BẬT TRONG THÁNG</h1>
+											<h2 class="banner_big_title">CA TRỰC</h2>
+											<p class="banner_description">
+												Có những bí mật ta cần <b><i>quên đi</i></b>.<br><br>
+
+												Năm 2007, Trung tâm Tự động hóa Công nghệ Sinh học Nano đã phát triển
+												công nghệ cho robot nhỏ có khả năng y học và sửa chữa máy móc. Cùng năm, propranolol được phát hiện
+												có khả năng xóa ký ức đau thương. Tuy nhiên, con người cũng đối mặt với nguy cơ tự đẩy mình
+												đến bờ vực tuyệt diệt. Trong tương lai gần, thế giới dường như tiến đến kết thúc, và người ta
+												chuẩn bị cho điều này thông qua một con đường sống dẫn vào lòng đất.<br><br>
+
+												<i>Đây là lịch sử về sự hình thành tháp giống.</i>
+											</p>
+
+											<ul class="banner_btns_group unordered_list">
+												<li>
+													<a class="btn btn_primary" href="#!">
+														<span>
+															<small>Chi tiết tại đây</small>
+															<small>Chi tiết tại đây</small>
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+
+										<div class="col col-lg-5">
+											<div class="banner_image_1 decoration_wrap">
+												<div class="image_wrap">
+													<img
+														src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/catruc01.jpg?v=1696215160763"
+														style="width: 100%;" alt="Ca trực">
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+
+					<div class="carousel-item">
+						<section class="hero_banner style_1">
+							<div class="container">
+								<div class="content_wrap">
+									<div class="row">
+										<div class="col col-lg-7">
+											<h1 class="banner_small_title">MỚI RA MẮT</h1>
+											<h2 class="banner_big_title">RẬP RỜN CÁNH HẠC</h2>
+											<p class="banner_description">
+												Mối quan hệ của chàng trai trẻ Kikuji với bốn người
+												phụ nữ, bốn con người chiếm những vị trí và vai trò hết sức quan trọng đối với cuộc đời anh, là
+												trà sư Chikako, cô học trò Yukiko, phu nhân Ota và cô con gái Fumiko. Năm con người gặp gỡ, gắn
+												kết với nhau, để rồi chia xa bên những chiếc bàn trà.<br><br>
+
+												Rập rờn cánh hạc là một trong nhiều sáng tác quan trọng của Kawabata Yasunari, góp phần giúp ông
+												giành giải Nobel Văn chương vào năm 1968.
+											</p>
+											
+											<ul class="banner_btns_group unordered_list">
+												<li>
+													<a class="btn btn_primary" href="#!">
+														<span>
+															<small>Chi tiết tại đây</small>
+															<small>Chi tiết tại đây</small>
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+
+										<div class="col col-lg-5">
+											<div class="banner_image_1 decoration_wrap">
+												<div class="image_wrap">
+													<img
+														src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/raproncanhhace1701744390495.jpg?v=1701744441637"
+														style="width: 100%;" alt="Rập rờn cánh hạc">
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+
+					<a class="carousel-control-prev custom-prev" role="button">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					</a>
+					<a class="carousel-control-next custom-next" role="button">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					</a>
+				</div> -->
+
+				<section class="advertisement_section bg_dark">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col col-lg-6">
+								<div style="padding: 60px 0;" class="section_heading">
+									<h2 style="color: #e33e3e;" class="heading_text">
+										Tour siêu khuyến mãi
+									</h2>
+									<h2 id="edm" class="text-white">Giảm 4.999.000 đ/ Khách - Áp dụng cho 5 khách đặt đầu tiên</h2>
+									<ul class="heading_description mb-0 text-white">
+										<li>
+											Hành trình du lịch qua các thành phố danh tiếng của Châu  u và trải nghiệm nhiều khoảnh khắc thú vị cùng PHONEIX. 
+										</li>
+										<li>
+											Chiêm ngưỡng các công trình kiến trúc nổi tiếng và các chứng tích lịch sử cổ kính như tháp Eiffel, Nhà Thờ Đức Bà, Bảo tàng Louvre, Tháp nghiêng Pisa,…
+										</li>
+										<li>
+											Ngỡ ngàng trước quốc gia quyền lực nhất thế giới - Vatican với Quảng trường và thánh đường Thánh Peter thiêng liêng . 
+										</li>
+										<li>
+											Thưởng ngoạn quang cảnh tuyệt đẹp ở thiên đường nghỉ dưỡng lý tưởng của người Thụy Sĩ với những hồ nước trong xanh phẳng lặng.
+										</li>
+									</ul>
+									<div class="btn_wrap pb-0">
+										<a class="btn btn_primary" href="blog_detail_1.html">
+											<span>
+												<small>Khám phá tại đây</small>
+												<small>Khám phá tại đây</small>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col col-lg-6">
+								<div class="row images_group decoration_wrap">
+									<!-- <div class="col col-md-12 col-sm-6">
+										<div class="image_wrap">
+											<img
+												src="/assets/images/2.jpg"
+												alt="so-do-cover">
+										</div>
+										<div class="image_wrap">
+											<img
+												src="/assets/images/3.jpg"
+												alt="ngay-moi-cover">
+										</div>
+									</div> -->
+									<div class="col col-md-12 col-sm-6">
+										<div class="image_wrap">
+											<img
+												src="assets/images/4.jpg"
+												alt="gio-dau-mua-cover">
+										</div>
+										<div class="image_wrap">
+											<img
+												src="assets/images/5.jpg"
+												alt="bon-muoi-nam-noi-lao-cover">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="courses_section section_space_lg">
+					<div style="padding: 24px;" class="">
+						<div class="section_heading">
+							<div class="row align-items-center">
+								<div class="col col-lg-12">
+									<h2 class="text-center heading_text mb-0">
+										Tour nổi bật
+									</h2>
+								</div>
+							</div>
+						</div>
+
+						<div class="tabs_wrapper">
+							<div class="tab-content">
+								<div class="tab-pane fade show active" id="tab_new" role="tabpanel">
+									<div class="row">
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="assets/images/4.jpg"
+															alt="">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Du lịch Châu  u [PHÁP - THỤY SĨ - Ý]</a></li>
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">119.000.000đ</span>
+														</div>
+													</div>
+													<h3 class="item_title">
+														<a href="#!">
+															CHINH PHỤC ĐỈNH TITLIS
+														</a>
+													</h3>
+													<a class="btn_unfill" href="blog_detail_2.html">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="assets/images/2.jpg"
+															alt="Lý do để sống tiếp">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Du lịch Châu Âu 2024 [Pháp - Thụy Sĩ - Ý]</a></li>
+
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">115.000.000đ</span>
+														</div>
+													</div>
+													<h3 class="item_title">
+														<a href="#!">
+															Khám Phá Vẻ Đẹp Của Venice - Hồ Como - Chinh phục đỉnh núi Titlis
+														</a>
+													</h3>
+													<a class="btn_unfill" href="blog_detail_3.html">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="./assets/images/3.jpg"
+															alt="trái tim người lớn là con hàu mang vỏ">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Du lịch Châu  u [PHÁP - THỤY SĨ - Ý]</a></li>
+
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">129.999.000đ</span>
+														</div>
+													</div>
+													<h3 class="item_title">
+														<a href="#!">
+															Du lịch Châu Âu [Pháp - Thụy Sỹ - Ý]
+														</a>
+													</h3>
+													<a class="btn_unfill" href="blog_detail_4.html">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<!-- <div class="tab-pane fade" id="tab_vndt" role="tabpanel">
+									<div class="row">
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/vieclangnew01.jpg?v=1697099092393"
+															alt="Việc làng">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Việt Nam danh tác</a></li>
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">54.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>Ngô Tất Tố</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Việc làng
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/traibotunglinh01.jpg?v=1697099071157"
+															alt="Trại Bồ Tùng Linh">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Việt Nam danh tác</a></li>
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">65.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>Thế Lữ</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Trại Bồ Tùng Linh
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/thuongnhomuoihai01.jpg?v=1697086483497"
+															alt="Thương nhớ mười hai">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Việt Nam danh tác</a></li>
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">99.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>Vũ Bằng</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Thương nhớ mười hai
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div> -->
+
+								<!-- <div class="tab-pane fade" id="tab_hc" role="tabpanel">
+									<div class="row">
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/ngoithunhatsoit01.jpg?v=1696216738573"
+															alt="Ngôi thứ nhất số ít">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Văn học hiện đại</a></li>
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">108.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>Haruki Murakami</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Ngôi thứ nhất số ít
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/vungdatquythamabat01.jpg?v=1695959985250"
+															alt="Tiếng núi (Bìa cứng)">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Văn học hiện đại</a></li>
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">168.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>Kevin Chen</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Vùng đất quỷ tha ma bắt
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/tiengnui01.jpg?v=1696493732970"
+															alt="Tiếng núi (Bìa cứng)">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Hư cấu</a></li>
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">220.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>KAWABATA YASUNARI</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Tiếng núi (Bìa cứng)
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div> -->
+
+								<!-- <div class="tab-pane fade" id="tab_phc" role="tabpanel">
+									<div class="row">
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/nhungtunhancuadialy01e16974447.jpg?v=1697445011877"
+															alt="Những tù nhân của địa lý">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Kinh tế chính trị</a></li>
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">210.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>Tim Marshall</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Những tù nhân của địa lý
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/dottuyetchungthu602-ed3660bc-a6c5-44c6-8de8-6a1be5313a00.jpg?v=1699849719330"
+															alt="Đợt tuyệt chủng thứ sáu">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Khoa học</a></li>
+
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">159.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>ELIZABETH KOLBERT</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Đợt tuyệt chủng thứ sáu
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/dambighet01.jpg?v=1698223855267"
+															alt="Dám bị ghét">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Tâm lý ứng dụng</a></li>
+
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">96.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>KISHIMI LCHIRO, KOGA FUMITAKE</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Dám bị ghét
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div> -->
+
+								<!-- <div class="tab-pane fade" id="tab_bestseller" role="tabpanel">
+									<div class="row">
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/caycamngotcuatoi01.jpg?v=1697099156757"
+															alt="Cây cam ngọt của tôi">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Văn học hiện đại</a></li>
+
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">108.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>JOSÉ MAURO DE VASCONCELOS</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Cây cam ngọt của tôi
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/lenchuisilothapgiap101scalede1.jpg?v=1695959977500"
+															alt="Len chùi (SILO - Tháp giống #1)">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Khoa học viễn tưởng</a></li>
+
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">268.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>HUGH HOWEY</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Len chùi (SILO - Tháp giống #1)
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col col-lg-4">
+											<div class="course_card">
+												<div class="item_image">
+													<a href="#!" data-cursor-text="View">
+														<img
+															src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/dietchung01.jpg?v=1696238501673"
+															alt="Diệt chủng">
+													</a>
+												</div>
+												<div class="item_content">
+													<div class="d-flex align-items-center justify-content-between mb-3">
+														<ul class="item_category_list unordered_list">
+															<li><a href="#!">Phiêu lưu ly kỳ</a></li>
+
+														</ul>
+														<div class="item_price">
+															<span class="sale_price">279.000đ</span>
+														</div>
+													</div>
+													<ul class="meta_info_list unordered_list">
+														<li>
+															<i class="fas fa-pen-nib"></i>
+															<span><b>TAKANO KAZUAKI</b></span>
+														</li>
+													</ul>
+													<h3 class="item_title">
+														<a href="#!">
+															Diệt chủng
+														</a>
+													</h3>
+													<a class="btn_unfill" href="#!">
+														<span class="btn_text">Xem chi tiết</span>
+														<span class="btn_icon">
+															<i class="fas fa-long-arrow-right"></i>
+															<i class="fas fa-long-arrow-right"></i>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div> -->
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- <section class="advertisement_section bg_dark">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col col-lg-6">
+								<div class="section_heading mb-lg-0">
+									<h2 class="heading_text text-white">
+										Đón đọc series<br>Việt Nam danh tác
+									</h2>
+									<p class="heading_description mb-0 text-white">
+										Tập hợp các tác phẩm kinh điển của văn học Việt Nam trong giai đoạn nửa đầu thế kỷ XX,
+										được tuyển chọn và in lại dựa trên những ấn bản toàn vẹn nhất, thường là các bản gốc hoặc
+										gần với bản gốc
+										nhất.
+										Bộ sách này là một nỗ lực vinh danh, giới thiệu lại với bạn đọc những gì đã một thời là tinh
+										tuý của văn
+										học Việt Nam.
+									</p>
+									<div class="btn_wrap pb-0">
+										<a class="btn btn_primary" href="book.html">
+											<span>
+												<small>Khám phá tại đây</small>
+												<small>Khám phá tại đây</small>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col col-lg-6">
+								<div class="row images_group decoration_wrap">
+									<div class="col col-md-6 col-sm-6">
+										<div class="image_wrap">
+											<img
+												src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/sodonew01.jpg?v=1697086460437"
+												alt="so-do-cover">
+										</div>
+										<div class="image_wrap">
+											<img
+												src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/ngaymoibiacung02.jpg?v=1696580433047"
+												alt="ngay-moi-cover">
+										</div>
+									</div>
+									<div class="col col-md-6 col-sm-6">
+										<div class="image_wrap">
+											<img
+												src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/giodaumua.jpg?v=1696215155123"
+												alt="gio-dau-mua-cover">
+										</div>
+										<div class="image_wrap">
+											<img
+												src="https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/bonmuoinamnoilao01.jpg?v=1696392841970"
+												alt="bon-muoi-nam-noi-lao-cover">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section> -->
+
+				<!-- <section class="event_section section_space_lg">
+					<div class="container">
+						<div class="section_heading">
+							<div class="row align-items-center">
+								<div class="col col-lg-5">
+									<h2 class="heading_text mb-0">
+										Sự kiện
+									</h2>
+								</div>
+								<div class="col col-lg-7 d-none d-lg-flex justify-content-end">
+									<div class="btn_wrap p-0">
+										<a class="btn border_dark" href="event.html">
+											<span>
+												<small>Xem sự kiện khác</small>
+												<small>Xem sự kiện khác</small>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col col-lg-4">
+								<div class="event_card">
+									<a class="item_image" href="event_detail.html">
+										<img
+											src="https://bizweb.dktcdn.net/100/363/455/files/bannerwebsite-8d5d0023-6258-45db-b453-a807b6545b2b.png?v=1701344132861"
+											alt="Toạ đàm 'Tang lễ của người An Nam'">
+									</a>
+									<div class="item_content">
+										<h3 class="item_title">
+											<a href="event_details.html">
+												Toạ đàm ra mắt bản dịch tiếng Việt cuốn sách "Tang lễ của người An Nam"
+											</a>
+										</h3>
+										<ul class="meta_info_list unordered_list_block">
+											<li>
+												<i class="fas fa-location-dot"></i>
+												<span>Phòng Prism, Nam Thi House</span>
+											</li>
+											<li>
+												<i class="fas fa-location-dot"></i>
+												<span>Số 152 Nam Kỳ Khởi Nghĩa, Quận 1, TP.HCM</span>
+											</li>
+											<li>
+												<i class="fas fa-calendar-day"></i>
+												<span>09 thg 12, 2023 09:30 - 11:30</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="col col-lg-4">
+								<div class="event_card">
+									<a class="item_image" href="event_detail.html">
+										<img src="https://bizweb.dktcdn.net/100/363/455/files/con-chu-a.png?v=1700746873958"
+											alt="Sự kiện 'Con cháu của họ cũng thế thôi'">
+									</a>
+									<div class="item_content">
+										<h3 class="item_title">
+											<a href="event_details.html">
+												Ra mắt tác phẩm đoạt giải Goncourt 2018 - "Con cháu của họ cũng thế thôi"
+											</a>
+										</h3>
+										<ul class="meta_info_list unordered_list_block">
+											<li>
+												<i class="fas fa-location-dot"></i>
+												<span>LeCafe</span>
+											</li>
+											<li>
+												<i class="fas fa-location-dot"></i>
+												<span>Ngõ 2 Nguyên Hồng, Đống Đa, Hà Nội.</span>
+											</li>
+											<li>
+												<i class="fas fa-calendar-day"></i>
+												<span>02 thg 12, 2023 09:30 - 11:00</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="col col-lg-4">
+								<div class="event_card">
+									<a class="item_image" href="event_detail.html">
+										<img src="https://bizweb.dktcdn.net/100/363/455/files/size-website.png?v=1700028687152"
+											alt="Ra mắt 'Anh hùng còn chi'">
+									</a>
+									<div class="item_content">
+										<h3 class="item_title">
+											<a href="event_details.html">
+												Ra mắt tập di cảo "Anh hùng còn chi" của nhà văn Nguyễn Huy Thiệp
+											</a>
+										</h3>
+										<ul class="meta_info_list unordered_list_block">
+											<li>
+												<i class="fas fa-location-dot"></i>
+												<span>Event Space, Tầng 3, Complex 01</span>
+											</li>
+											<li>
+												<i class="fas fa-location-dot"></i>
+												<span>Số 29, ngách 31, ngõ 167 Tây Sơn, Hà Nội</span>
+											</li>
+											<li>
+												<i class="fas fa-calendar-day"></i>
+												<span>22 thg 11, 2023 18:00 - 20:00</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="btn_wrap d-block d-lg-none pb-0 text-center">
+								<a class="btn border_dark" href="event.html">
+									<span>
+										<small>Xem sự kiện khác</small>
+										<small>Xem sự kiện khác</small>
+									</span>
+								</a>
+							</div>
+						</div>
+				</section> -->
+
+				<!-- <section class="intro_video_section section_space_lg bg_light_2 overflow-hidden decoration_wrap">
+					<div class="container position-relative">
+						<div class="section_heading text-center">
+							<h2 class="heading_text mb-0">
+								Giao lưu cùng nhà văn xứ Đài Kevin Chen
+							</h2>
+						</div>
+						<div class="intro_video">
+							<div class="video_wrap tilt">
+								<img src="assets/images/index_video_thumbnail.jpg" alt="kevin-chen">
+								<a class="video_play_btn popup_video" href="https://www.youtube.com/watch?v=veESkMcN8UU">
+									<span class="icon"><i class="fas fa-play"></i></span>
+								</a>
+							</div>
+						</div>
+				</section> -->
+		</main>
+
+		<!-- <footer class="site_footer">
+			<div class="footer_widget_area">
+				<div class="container">
+					<div class="row">
+						<div class="col col-lg-4 col-md-6 col-sm-6">
+							<div class="footer_widget">
+								<div class="site_logo">
+									<a class="site_link" href="index.html">
+										<img src="assets/images/culture-depot-logo.webp" width="150px" alt="Culture Depot">
+									</a>
+								</div>
+								<p>
+									Lấy sách và văn hoá đọc làm trung tâm, đây là nơi bạn có thể tìm thấy những cuốn sách
+									mình hứng thú, tìm
+									thấy không gian để chia sẻ niềm đam mê, tìm thấy những sự kiện để kích thích sự đọc và
+									yêu sách, giúp
+									lan truyền giá trị về văn hóa đọc đến mọi người.
+								</p>
+								<ul class="social_links unordered_list">
+									<li>
+										<a href="https://www.facebook.com/nhanampublishing"><i class="fab fa-facebook-f"></i></a>
+									</li>
+									<li>
+										<a href="https://www.youtube.com/@NhanamVideoChannel"><i class="fab fa-youtube"></i></a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/nhanambooks/"><i class="fab fa-instagram"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-lg-4">
+							<div class="row">
+								<div class="col col-md-6 col-sm-6">
+									<div class="footer_widget">
+										<h3 class="footer_widget_title">Tour</h3>
+										<ul class="page_list unordered_list_block">
+											<li>
+												<a href="book.html">
+													<span class="item_icon"><i class="fas fa-caret-right"></i></span>
+													<span class="item_text">Tất cả tour</span>
+												</a>
+											</li>
+											<li>
+												<a href="book_fts.html">
+													<span class="item_icon"><i class="fas fa-caret-right"></i></span>
+													<span class="item_text">Hư cấu</span>
+												</a>
+											</li>
+											<li>
+												<a href="book_nonfts.html">
+													<span class="item_icon"><i class="fas fa-caret-right"></i></span>
+													<span class="item_text">Phi hư cấu</span>
+												</a>
+											</li>
+											<li>
+												<a href="book_vndt.html">
+													<span class="item_icon"><i class="fas fa-caret-right"></i></span>
+													<span class="item_text">Việt Nam danh tác</span>
+												</a>
+											</li>
+											<li>
+												<a href="#!">
+													<span class="item_icon"><i class="fas fa-caret-right"></i></span>
+													<span class="item_text">Sách bán chạy</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="col col-md-6 col-sm-6">
+									<div class="footer_widget">
+										<h3 class="footer_widget_title">Đường dẫn khác</h3>
+										<ul class="page_list unordered_list_block">
+											<li>
+												<a href="blog.html">
+													<span class="item_icon"><i class="fas fa-caret-right"></i></span>
+													<span class="item_text">Bảng tin</span>
+												</a>
+											</li>
+											<li>
+												<a href="event.html">
+													<span class="item_icon"><i class="fas fa-caret-right"></i></span>
+													<span class="item_text">Sự kiện</span>
+												</a>
+											</li>
+											<li>
+												<a href="aboutus.html">
+													<span class="item_icon"><i class="fas fa-caret-right"></i></span>
+													<span class="item_text">Về chúng tôi</span>
+												</a>
+											</li>
+											<li>
+												<a href="contactus.html">
+													<span class="item_icon"><i class="fas fa-caret-right"></i></span>
+													<span class="item_text">Liên hệ</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col col-lg-4 col-md-6 col-sm-6">
+							<div class="footer_widget">
+								<h3 class="footer_widget_title">Lựa chọn của biên tập viên</h3>
+								<ul class="blog_small_group unordered_list_block">
+									<li>
+										<a class="blog_small" href="#!">
+											<span class="item_image" style="width: 140px; height: auto; display: block; overflow: hidden;">
+												<img src="https://bizweb.dktcdn.net/100/363/455/articles/seo-2.png?v=1700487959943"
+													alt="blog-btv-1">
+											</span>
+											<span class="item_content">
+												<strong class="item_title">5 bí quyết dưỡng ẩm đắt giá - Chăm sóc da hiệu
+													quả ngay trong mùa
+													đông</strong>
+												<small class="item_post_date">20 thg 11, 2023</small>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a class="blog_small" href="#!">
+											<span class="item_image" style="width: 140px; height: auto; display: block; overflow: hidden;">
+												<img src="https://bizweb.dktcdn.net/100/363/455/files/website-nn-16.png?v=1696932969631"
+													alt="blog-btv-2">
+											</span>
+											<span class="item_content">
+												<strong class="item_title">"Người Đài Bắc": Tàn một giấc mộng quá vãng nơi
+													xứ người</strong>
+												<small class="item_post_date">10 thg 10, 2023</small>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer> -->
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+	<script src="assets/js/bootstrap-dropdown-ml-hack.js"></script>
+
+	<script src="assets/js/cursor.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+	<script src="assets/js/parallax-scroll.js"></script>
+
+	<script src="assets/js/slick.min.js"></script>
+
+	<script src="assets/js/magnific-popup.min.js"></script>
+
+	<script src="assets/js/vanilla-calendar.min.js"></script>
+
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		document.querySelectorAll('.carousel').forEach(function (carousel) {
+			var nextButton = carousel.querySelector('.custom-next');
+			var prevButton = carousel.querySelector('.custom-prev');
+
+			nextButton.addEventListener('click', function () {
+				$(carousel).carousel('next');
+			});
+
+			prevButton.addEventListener('click', function () {
+				$(carousel).carousel('prev');
+			});
+		});
+
+		$(document).ready(function () {
+			$('#carouselExample').carousel({
+				interval: 10000,
+				pause: 'hover' // Dừng lại khi di chuột
+			});
+
+			setInterval(function () {
+				$('#carouselExample').carousel('next');
+			}, 10000);
+		});
+	</script>
+
+	<script>
+		function adjustHeights() {
+			var maxHeightCarouselItem = 0;
+			var maxHeightContentWrap = 0;
+
+			// Tìm chiều cao lớn nhất của carousel-item
+			$('#carouselExample .carousel-item').each(function () {
+				var thisHeight = $(this).height();
+				if (thisHeight > maxHeightCarouselItem) {
+					maxHeightCarouselItem = thisHeight; // Cập nhật chiều cao lớn nhất
+				}
+			});
+
+			// Tìm chiều cao lớn nhất của content-wrap
+			$('#carouselExample .carousel-item .content_wrap').each(function () {
+				var thisHeight = $(this).height();
+				if (thisHeight > maxHeightContentWrap) {
+					maxHeightContentWrap = thisHeight; // Cập nhật chiều cao lớn nhất
+				}
+			});
+
+			// Thiết lập chiều cao cho carousel-inner và mỗi content_wrap
+			$('.carousel-inner').height(maxHeightCarouselItem);
+			$('.content_wrap').height(maxHeightContentWrap);
+		}
+
+		// Chạy hàm khi tài liệu sẵn sàng và khi cửa sổ được thay đổi kích thước
+		$(document).ready(adjustHeights);
+		$(window).resize(adjustHeights);
+
+	</script>
+
+	<script>
+		$(document).ready(function () {
+
+			// Trượt trên điện thoại
+			if ('ontouchstart' in document.documentElement) {
+
+				// Enable swipe for Bootstrap Carousel
+				$(".carousel").on("touchstart", function (event) {
+					var xClick = event.originalEvent.touches[0].pageX;
+
+					$(this).one("touchmove", function (event) {
+						var xMove = event.originalEvent.touches[0].pageX;
+						if (Math.floor(xClick - xMove) > 5) {
+							$(this).carousel('next');
+						}
+						else if (Math.floor(xClick - xMove) < -5) {
+							$(this).carousel('prev');
+						}
+					});
+
+					$(".carousel").on("touchend", function () {
+						$(this).off("touchmove");
+					});
+
+				});
+			}
+
+			interval = setInterval(function () {
+				// đổi in nghiêng sang thường là ngược lại
+				$('#edm').toggleClass('italic');
+			}, 1000);
+		});
+	</script>
+
+
+	<script type="module" src="assets/firebase-newsletter.js"></script>
+
+</body>
+
+</html>
