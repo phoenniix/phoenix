@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Du lịch Thụy Sĩ - PHOENIX Travel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Hiệu ứng chung */
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        color: #e91e63;
+        /* Màu nổi bật */
+    }
+
+    /* Hiệu ứng cho phần Điểm Nổi Bật */
+    .highlights {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .highlight-item {
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        /* Thêm hiệu ứng chuyển động */
+    }
+
+    .highlight-item:hover {
+        transform: translateY(-5px);
+        /* Di chuyển lên khi hover */
+    }
+
+    .highlight-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    /* Hiệu ứng cho phần Các Tour */
+    .tours {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    .tour-item {
+        border: 1px solid #ddd;
+        padding: 1rem;
+    }
+
+    /* Hiệu ứng cho phần Dịch Vụ */
+    .service {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .service-item {
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+
+    .service-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* ... (Các hiệu ứng CSS trước đó) ... */
+
+/* Hiệu ứng cho phần Trọn Gói */
+.package-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.package-info {
+    text-align: left;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #e91e63; /* Màu nổi bật */
+    margin-bottom: 0.5rem;
+}
+
+.promotion {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.details li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-button {
+    background-color: #e91e63; /* Màu nổi bật */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+.contact-button:hover {
+    background-color: #c2185b; /* Màu đậm hơn khi hover */
+}
+
+.package-image img {
+    width: 400px; /* Điều chỉnh kích thước hình ảnh */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+</style>
+<body>
+    <header>
+        <h1>Trải Nghiệm Tuyệt Vời Tại Thụy Sĩ</h1>
+    </header>
+    <main>
+        <section class="package-highlight">
+            <div class="package-info">
+                <p class="price">Giá: 115.500.000 ₫</p>
+                <p class="promotion">Khuyến mãi: Liên hệ Tổng Đài để được tư vấn cụ thể các ưu đãi áp dụng</p>
+                <ul class="details">
+                    <li>Thời gian: 11 ngày 10 đêm</li>
+                    <li>Điểm đến: Thụy Sĩ, Đức, Áo</li>
+                    <li>Khởi hành từ: Sài Gòn/Hà Nội</li>
+                    <li>Ngày khởi hành: 07, 19/09 - 10, 24/10 - 08/11</li>
+                </ul>
+                <button class="contact-button">Liên Hệ Ngay</button>
+            </div>
+            <div class="package-image">
+                <img src="europe-package.jpg" alt="Hình ảnh trọn gói du lịch Châu Âu"> 
+            </div>
+        </section>
+        <section class="package-details">
+            <h2>Chi Tiết Chuyến Đi</h2>
+            <p>Mô tả chi tiết về lịch trình, các điểm tham quan, khách sạn, dịch vụ đi kèm,...</p>
+        </section>
+        <section class="why-choose-us">
+            <h2>Tại Sao Chọn PHOENIX Travel?</h2>
+            <ul>
+                <li>Kinh nghiệm tổ chức tour châu Âu chuyên nghiệp</li>
+                <li>Đội ngũ hướng dẫn viên nhiệt tình, am hiểu</li>
+                <li>Dịch vụ chất lượng, đảm bảo sự hài lòng</li>
+            </ul>
+        </section>
+
+        <section class="highlights">
+            <h2>Điểm Nổi Bật</h2>
+            <div class="highlight-item">
+                <img src="swiss1.jpg" alt="Zurich">
+                <h3>Thành Phố Zurich</h3>
+            </div>
+            <div class="highlight-item">
+                <img src="swiss2.jpg" alt="Jungfraujoch">
+                <h3>Đỉnh Jungfraujoch</h3>
+            </div>
+            <div class="highlight-item">
+                <img src="swiss3.jpg" alt="Lucerne">
+                <h3>Lucerne Xinh Đẹp</h3>
+            </div>
+        </section>
+        <section class="tours">
+            <h2>Các Tour Du Lịch Thụy Sĩ</h2>
+            </section>
+    </main>
+    <footer>
+        </footer>
+</body>
+</html>
